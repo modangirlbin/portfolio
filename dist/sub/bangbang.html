@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />	
+<meta name="description" content="직방" />
+<meta name="keyword" content="publisher, ui-developer, 마크업, UI개발" />
+<title>portpoilio, LEE HYE BIN</title>
+<link rel="shortcut icon" href="../img/title_icon.ico" type="image/x-icon" /> 
+<link rel="stylesheet" href="../css/sub.css" />
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+<script src="../js/modernizr.custom.37797.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap sub">
+  <div class="header">
+    <!-- <img src="images/top_visual_plane.png" alt="반갑습니다. 이혜빈의 포트폴리오 입니다."> -->
+    <aside class="aside_others">
+      <nav class="nav_others">
+        <h2 class="offscreen">others</h2>
+        <a href="#">project1<span class="blink"></span></a>
+        <a href="#">project2<span class="blink"></span></a>
+        <a href="#">project3<span class="blink"></span></a>
+      </nav>
+    </aside>
+    <div class="area_visual">
+      <div class="box_visual">
+        <canvas id="canvas" width="100" height="100"></canvas>
+        <script type="importmap">
+          {
+            "imports": {
+              "three": "https://unpkg.com/three@0.138.3/build/three.module.js",
+              "GLTFLoader":
+              "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+          }
+        </script>
+        <script type="module">
+          import {GLTFLoader} from 'GLTFLoader';
+          import * as THREE from 'three';
+
+          let scene = new THREE.Scene();
+          let renderer = new THREE.WebGLRenderer({
+            canvas : document.querySelector('#canvas'),
+            alpha : true,
+            antialias : true //antialias
+          });
+          renderer.outputEncoding = THREE.sRGBEncoding; //gltf파일은 인코딩 변경해야
+          
+          let camera = new THREE.PerspectiveCamera(10, 1); //원근법
+          camera.position.set(.39,0,10); //카메라 위치조정
+
+          // scene.background = new THREE.Color('00000000'); //배경
+          let light = new THREE.HemisphereLight(0x8de7ff, 0x7962b4, 1) //조명
+          scene.add(light)
+
+          //gltf파일 가져오기.
+          let loader = new GLTFLoader();
+          loader.load('../geometry/scene.gltf', function(gltf){
+            scene.add(gltf.scene);
+            renderer.render(scene, camera);
+            
+            function animate(){
+              requestAnimationFrame(animate)
+              gltf.scene.rotation.y += 0.01;
+              renderer.render(scene, camera);
+            }
+            animate()
+          });
+
+        </script>
+      </div>
+      <!-- <p class="text">Project1. Vue, SCSS, A11y</p> -->
+    </div>
+  </div>
+<div class="content">
+  <article>
+    <h2 class="tit_sub" data-aos="fade-right"> Vue로 제작한 집구하기 부동산 모바일 웹페이지 입니다.</h2>
+    <div class="area_cont" data-aos="fade-right">
+      <ul class="list_desc">
+        <li>매물이름, 사진, 가격등의 가상 데이터파일을 작성하고 이에 따른 매물목록이 화면에 표시되도록 하였습니다.</li>
+        <li>작성되어 있는 만큼의 상품매물이 표시되며, 급매물인 상품인 경우 이미지에 '급매' flag가 표시됩니다.</li>
+        <li>'낮은 가격순', '높은 가격순' 버튼을 클릭하면 각각 오름차순, 내림차순 목록 재정렬 됩니다.</li>
+        <li>매물 목록 클릭시 팝업창 열리며 상세 매물정보 확인할수 있도록 하였습니다.</li>
+        <li>오른쪽 상단 메뉴버튼 클릭시 사이드 메뉴 열리며, 닫기 또는 dim영역 클릭시 닫힙니다.</li>
+        <li>접근성, SEO 고려하여 작업하였습니다.</li>
+      </ul>
+      <div class="box_btn">
+        <a href="https://modangirlbin.github.io/find-house" class="btn btn_go" title="페이지 바로가기 새창열림" target="_blank" rel="noreferrer noopener">웹페이지 바로가기</a>
+        <a href="https://github.com/modangirlbin/find-house" class="btn btn_github">github 바로가기</a>
+      </div>
+      <div class="area_figure" data-aos="fade-right">
+        <figure>
+          <img clas="img" src="https://raw.githubusercontent.com/modangirlbin/find-house/master/src/assets/img/overview.png" alt="집구하기, 방방">
+        </figure>
+      </div>
+    </div>
+  </article>
+</div>
+<div class="footer"></div>
+</div>
+</body>
+<script src="../js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</html>

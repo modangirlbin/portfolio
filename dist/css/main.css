@@ -1,0 +1,212 @@
+@import "common.css";
+@import "stars.css";
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css);
+
+/*************************************************** 
+  MAIN
+***************************************************/
+
+.skip_nav a{position:fixed; top:-9999px; left:0; width:100%; padding:10px; font-weight:bold; text-align:center; color:#fff; background:#2b4da7; z-index:9999}
+.skip_nav a:focus{top:0px}
+
+.wrap{
+  background:url(../img/bottom_bg.png) bottom no-repeat; background-size:contain;
+}
+.area_visual .item_visual{
+  display: block;
+  position: relative;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+
+/*************************************************** 
+  CONTENTS
+***************************************************/
+.contents{width:1160px; margin:0 auto}
+.tit_sec{
+  padding: 10px 0;
+  font-size: 30px;
+}
+.box_inner{
+  position: relative;
+  width: 1160px;
+  margin: 0 auto;
+  padding: 50px 30px;
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+.box_inner p{
+  font-size: 15px;
+  line-height: 25px;
+}
+
+/* about */
+.sec_about{
+  background:#e7f9fb;
+}
+.sec_about .tit_sec.on{
+  margin-left: 0;
+  transition-property:margin-left; 
+  transition-duration:.7s;
+}
+.sec_about .desc_sec.on{
+  margin-left: 0;
+  transition-property:margin-left; 
+  transition-duration:.7s;
+  transition-delay: .3s;
+}
+
+/* work */
+.sec_work{
+  background: #e7fff3;
+}
+.btn.btn_career{
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  transition-duration: 2000ms;
+}
+.sec_work .box_inner{
+  padding-left: 400px;
+}
+
+/* portpolio */
+.sec_portpolio{
+  overflow: hidden;
+}
+/* list */
+.list_item{
+  margin-top:30px;
+}
+.list_item .item{
+  display: inline-block;
+  width: 230px;
+  margin-right: 20px;
+}
+.list_item .thum a{
+  display: inline-block;
+  width: 230px;
+  height: 222px;
+  background-size: cover;
+}
+.list_item .thum a::after{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: rgba(0,0,0,.6);
+  transition: opacity 0.3s ease;
+  content: '';
+}
+.list_item .thum a:hover:after{
+
+  opacity: 1;
+}
+.list_item .inner_item .point{
+  opacity: 0;
+}
+.list_item .inner_item:hover .point{
+  opacity: 1;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: lighter;
+  z-index: 1;
+}
+/* thum */
+.thum_timex a{background-image:url(https://raw.githubusercontent.com/modangirlbin/timex/master/images/overview.png)}
+.thum_movie a{background-image:url(https://raw.githubusercontent.com/modangirlbin/movie-app/master/src/img/overview.png)}
+.thum_intergis a{background-image:url(https://raw.githubusercontent.com/modangirlbin/intergis/master/resource/images/overview.png)}
+.thum_bangbang a{background-image:url(https://raw.githubusercontent.com/modangirlbin/find-house/master/src/assets/img/overview.png)}
+.thum_myzone a{background-image:url(https://raw.githubusercontent.com/modangirlbin/myzone-download/master/myzone_overview.png)}
+
+/* essay */
+.sec_essay{
+  background:#f1f1f1;
+}
+.list_essay{
+  display: flex;
+  margin-top: 50px;
+}
+
+.list_essay li{
+  display: flex;
+  position: relative;
+  flex: none;
+  width: 90px;
+  height: 85px;
+  margin-right: 20px;
+  border-radius: 10px;
+  text-align: center;
+  background: url(//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/100px-Notion-logo.svg.png) no-repeat;
+  background-size: contain;
+  background-color: rgba(0,0,0,.5);
+
+}
+.list_essay li::before{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  background: rgba(0,0,0,.6);
+  content: '';
+}
+.list_essay li a{
+  display: block;
+  margin: auto;
+  color: #fff;
+  z-index: 1;
+}
+
+/*************************************************** 
+  CONTECT
+***************************************************/
+.footer{position:relative; width:100%; height:400px;}	
+.footer address{
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 5px;
+  text-align: right;
+  box-sizing: border-box
+}
+
+/* TextScramble */
+
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&display=swap');
+
+.wrap_visual{
+  position: relative;
+  text-align: center;
+}
+.wrap_text {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.text {
+  font-family: 'Chivo Mono', monospace;
+  font-weight: 100;
+  font-size: 40px;
+  color: #444;
+}
+.dud {
+  color: #aaa;
+}
+

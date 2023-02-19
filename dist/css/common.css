@@ -1,0 +1,71 @@
+
+@import url(https://unpkg.com/aos@2.3.1/dist/aos.css);
+
+/* RESET */
+*{margin:0; padding:0}
+body{font:13px sans-serif; color:#000}
+input, select, button, option, textarea{font:12px 'Nanum Gothic', Dotum, sans-serif; color:#000; border:0 none}
+h1, h2, h3, h4, h5, h6{font-size:1.0em; font-weight:normal}
+img, fieldset, iframe, frameset{border:0 none}
+legend{display:none}
+ul, li{list-style:none}
+address, em{font-style:normal}
+b, strong{font-weight:normal}
+a{text-decoration:none; color:#000}
+a:hover{color:#000}
+.offscreen{position:absolute; width:1px; height:1px; margin:-1px; padding:0; border:0; clip:rect(0 0 0 0); overflow:hidden}
+
+.wrap{
+  position: relative;
+}
+
+/* HEADER */
+.header{
+  position: relative;
+  width: 100%;
+  margin:0 auto;
+  background: linear-gradient(-45deg, #b3ffb1, #dae4ff, #b1e6ff, #ffb1f5);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+/* BTN */
+.btn{
+  display: inline-block;
+  padding: 15px 100px 15px 15px;
+  border: 1px solid #333;
+}
+.btn::before{
+  display: block;
+  position: absolute;
+  bottom: 19px;
+  width: 56px;
+  height: 1px;
+  right: 29px;
+  background: #333;
+  content: '';
+}
+.btn::after{
+  display: block;
+  position: absolute;
+  right: 28px;
+  bottom: 22px;
+  width: 10px;
+  height: 1px;
+  background: #333;
+  transform: rotate(45deg);
+  content: '';
+}
+
+/* KEYFRAMES */
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}

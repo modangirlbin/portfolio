@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />	
+<meta name="description" content="직방" />
+<meta name="keyword" content="publisher, ui-developer, 마크업, UI개발" />
+<title>portpoilio, LEE HYE BIN</title>
+<link rel="shortcut icon" href="../img/title_icon.ico" type="image/x-icon" /> 
+<link rel="stylesheet" href="../css/sub.css" />
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+<script src="../js/modernizr.custom.37797.js"></script> 
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap sub">
+  <div class="header">
+    <!-- <img src="images/top_visual_plane.png" alt="반갑습니다. 이혜빈의 포트폴리오 입니다."> -->
+    <aside class="aside_others">
+      <nav class="nav_others">
+        <h2 class="offscreen">others</h2>
+        <a href="#">project1<span class="blink"></span></a>
+        <a href="#">project2<span class="blink"></span></a>
+        <a href="#">project3<span class="blink"></span></a>
+      </nav>
+    </aside>
+    <div class="area_visual">
+      <div class="box_visual">
+        <canvas id="canvas" width="100" height="100"></canvas>
+        <script type="importmap">
+          {
+            "imports": {
+              "three": "https://unpkg.com/three@0.138.3/build/three.module.js",
+              "GLTFLoader":
+              "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+          }
+        </script>
+        <script type="module">
+          import {GLTFLoader} from 'GLTFLoader';
+          import * as THREE from 'three';
+
+          let scene = new THREE.Scene();
+          let renderer = new THREE.WebGLRenderer({
+            canvas : document.querySelector('#canvas'),
+            alpha : true,
+            antialias : true //antialias
+          });
+          renderer.outputEncoding = THREE.sRGBEncoding; //gltf파일은 인코딩 변경해야
+          
+          let camera = new THREE.PerspectiveCamera(10, 1); //원근법
+          camera.position.set(.39,0,10); //카메라 위치조정
+
+          // scene.background = new THREE.Color('00000000'); //배경
+          let light = new THREE.HemisphereLight(0x8de7ff, 0x7962b4, 1) //조명
+          scene.add(light)
+
+          //gltf파일 가져오기.
+          let loader = new GLTFLoader();
+          loader.load('../geometry/scene.gltf', function(gltf){
+            scene.add(gltf.scene);
+            renderer.render(scene, camera);
+            
+            function animate(){
+              requestAnimationFrame(animate)
+              gltf.scene.rotation.y += 0.01;
+              renderer.render(scene, camera);
+            }
+            animate()
+          });
+
+        </script>
+      </div>
+      <!-- <p class="text">Project1. Vue, SCSS, A11y</p> -->
+    </div>
+  </div>

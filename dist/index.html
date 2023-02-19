@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />	
+<meta name="description" content="안녕하세요, 이혜빈의 포트폴리오 입니다." />
+<meta name="keyword" content="publisher, ui-developer, 마크업, UI개발" />
+<title>portpoilio, LEE HYE BIN</title>
+<link rel="shortcut icon" href="img/title_icon.ico" type="image/x-icon" /> 
+<link rel="stylesheet" href="css/main.css" />
+<script
+  src="https://code.jquery.com/jquery-3.6.3.min.js"
+  integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+  crossorigin="anonymous"></script>
+<script src="js/modernizr.custom.37797.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+<!-- font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
+</head>
+<style>
+	 .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+  </style>
+<body>
+<div class="wrap">
+	<ul class="skip_nav">
+		<li><a href="#content">본문내용 바로가기</a></li>
+		<li><a href="#gnb_area">주메뉴 바로가기</a></li>
+	</ul>
+
+	<div class="header">
+		<!-- <img src="images/top_visual_plane.png" alt="반갑습니다. 이혜빈의 포트폴리오 입니다."> -->
+		<div class="stars">
+			<div class="night">
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+				<span class="shooting_star"></span>
+			</div>
+		</div>
+		<div class="area_visual">
+			<canvas id="canvas" class="item_visual" width="500" height="500"></canvas>
+
+			<script type="importmap">
+				{
+					"imports": {
+						"three": "https://unpkg.com/three@0.138.3/build/three.module.js",
+						"GLTFLoader":
+						"https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+					}
+				}
+			</script>
+
+			<script type="module">
+				import {GLTFLoader} from 'GLTFLoader';
+				import * as THREE from 'three';
+
+				let scene = new THREE.Scene();
+				let renderer = new THREE.WebGLRenderer({
+					canvas : document.querySelector('#canvas'),
+					alpha : true,
+					antialias : true //antialias
+				});
+				renderer.outputEncoding = THREE.sRGBEncoding; //gltf파일은 인코딩 변경해야
+				
+				let camera = new THREE.PerspectiveCamera(10, 1); //원근법
+				camera.position.set(0,0,10); //카메라 위치조정
+
+				// scene.background = new THREE.Color('00000000'); //배경
+				let light = new THREE.HemisphereLight(0x8de7ff, 0x7962b4, 1) //조명
+				scene.add(light)
+
+				//gltf파일 가져오기.
+				let loader = new GLTFLoader();
+				loader.load('geometry/scene.gltf', function(gltf){
+					scene.add(gltf.scene);
+					renderer.render(scene, camera);
+					
+					function animate(){
+						requestAnimationFrame(animate)
+						gltf.scene.rotation.y += 0.01;
+						renderer.render(scene, camera);
+					}
+					animate()
+				});
+
+			</script>
+		</div>
+		<div class="wrap_text">
+			<div class="text"></div>
+		</div>
+	</div>
+	<section class="sec_about">
+		<div class="box_inner">
+			<h2 class="tit_sec" data-aos="fade-right">ABOUT</h2>
+			<p class="desc_sec" data-aos="fade-right">의미있는 마크업과 안정적인 스타일을 구현하려 합니다.<br>
+				디자이너의 소중한 작업물을 반영하며, 개발자와 함께 결과물을 바라보겠습니다.<br>			
+				항상 재미있지만 언제나 어려운 일이라고 생각합니다.<br>			
+				놓치지 않고 즐겁게 배우며 만들어나가고 싶습니다.</p>
+		</div>
+	</section>
+	<section class="sec_work">
+		<div class="box_inner">
+			<h2 class="tit_sec" data-aos="fade-right">WORK</h2>
+			<p data-aos="fade-right">이커머스 운영 및 프로젝트 파견 구축업무 담당하였습니다.<br>
+				Git, SASS, Jeplin 환경에서 근무하였으며, redmine, yona등의 이슈관리툴,
+				slack, notion, jandi등의 커뮤니케이션 툴 이용하였습니다.<br>			
+				접근성 권고사항 반영 및 마크취득작업 하였으며, pc 및 m, app내의 기기별 이슈대응 작업 등을 진행하였습니다.</p>
+			<a href="https://modangirl.notion.site/e64f7508feaa47b3b1f6b562d928ba60" class="btn btn_career" data-aos="fade-left" title="새창열림" target="_blank" rel="noreferrer noopener">경력기술서 바로가기</a>
+		</div>
+	</section>
+	<section class="sec_portpolio">
+		<div class="box_inner">
+			<h2 class="tit_sec" data-aos="fade-right">PORTPOLIO</h2>
+			<p class="desc_tit" data-aos="fade-right">가상 리뉴얼 사이트 및 작업물 입니다.<br>
+			이미지를 클릭하시면 상세 페이지로 이동합니다.</p>
+			<div class="swiper" data-aos="fade-right">
+				<ul class="list_item swiper-wrapper">
+					<li class="item swiper-slide">
+						<div class="inner_item">
+							<div class="thum thum_bangbang">
+								<a href="sub/find_house.html" title="사이트 바로가기 새창열림" target="_blank" rel="noreferrer noopener"><span class="point">#VUE<br> #SCSS<br> #a11y</span></a>
+							</div>
+						</div>
+					</li>
+					<li class="item swiper-slide">
+						<div class="inner_item">
+							<div class="thum thum_movie">
+							<a href="https://modangirlbin.github.io/movie-app/" title="사이트 바로가기 새창열림" target="_blank" rel="noreferrer noopener"><span class="point">#REACT<br> #SCSS<br> #a11y</span></a>
+							</div>
+						
+												<!-- <div class="cont">
+								<span class="page_type mobile">mobile</span>
+								<ul class="page_desc">
+									<li>The Movie DB에서 제공되는 영화정보 API 사용하여 영화 목록을 표시하는 React 모바일 웹페이지 입니다.</li>
+									<li>최초 랜더링시 20개의 영화정보가 표시되며, 하단 '더보기' 버튼 클릭시 20개의 영화정보가 추가로 표시됩니다.</li>
+									<li>메인이미지에는 영화 제목 및 개요 정보를, 영화 목록에는 해당 영화의 별점 정보를 나타내도록 하였습니다.</li>
+									<li>상단 메뉴버튼 클릭시 메뉴 토글되며, 해당 요소 접근성 속성 함께 맞추어 변경됩니다.</li>
+									<li>seo 고려하여 meta요소 작성하였습니다.</li>
+								</ul>
+							</div> -->
+						</div>
+					</li>
+					<li class="item swiper-slide">
+						<div class="inner_item">
+						<div class="thum thum_timex">
+								<a href="https://modangirlbin.github.io/timex/" target="_blank" title="타이맥스 사이트 바로가기 새창열림" rel="noreferrer noopener"><span class="point">#PC<br> #JS<br> #HTML</span></a>
+							</div>
+							<!-- <div class="cont">
+								<span class="page_type pc">pc</span>
+								<ul class="page_desc">
+									<li>TIMEX 홈페이지 가상 리뉴얼 PC웹페이지 입니다.</li>
+									<li>메인 시계이미지 JS사용하여 현재시간 나타내는 시계바늘 움직이도록 하였습니다.</li>
+									<li>숨김텍스트 이용하여 접근성 사용자도 현재시간을 알수 있도록 작성하였습니다.</li>
+									<li>메인 카피문구 효과는 JS없이 CSS animation 이용하여 구현하였습니다.</li>
+									<li>IE10이상, chrome에서 정상작동합니다.</li>
+								</ul>
+							</div> -->
+						</div>
+					</li>
+					<li class="item swiper-slide">
+						<div class="inner_item">
+							<div class="thum thum_intergis">
+								<a href="project/works/intergis/html/main.html" target="_blank" title="사이트 바로가기 새창열림" rel="noreferrer noopener"><span class="point">#HTML<br> #JS<br> #CSS</span></a>
+							</div>
+							<!-- <div class="cont">
+								<span class="page_type pc">pc</span>
+								<ul class="page_desc">
+									<li>동국제강 intergis 메인페이지 PC작업물 입니다.</li>
+									<li>기여도 100%</li>
+									<li>상단메뉴, 메인이미지, 하단 협력사 리스트 slick 사용하여 슬라이드 구현하였습니다..</li>
+									<li>왼쪽하단 JS 사용하여 오늘날짜 표시하였습니다.</li>
+									<li>각메뉴 hover시 스타일 전환됩니다.</li>
+								</ul>
+							</div> -->
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<section class="sec_essay">
+		<div class="box_inner">
+			<h3 class="tit_sec" data-aos="fade-right">ESSAY</h3>
+			<div class="cont" data-aos="fade-right">
+				<p class="txt_callout">작업중 팀내 공유한 소소한 글들 몇개 올려 보았습니다.<br>
+				클릭하시면 노션 페이지로 이동합니다.</p>
+				<ul class="list_essay">
+					<li><a href="https://modangirl.notion.site/effd6314f7db4d7581ba39d72e37e779"  title="페이지 바로가기 새창열림" target="_blank" rel="noreferrer noopener">작업브랜치<br> 편집하여<br> 새로 만들기</a></li>
+					<li><a href="https://modangirl.notion.site/e6720ec49d3e4c9b81e57a1bfd84e76e"  title="페이지 바로가기 새창열림" target="_blank" rel="noreferrer noopener">가변 박스<br> 대각선 긋기</a></li>
+					<li><a href="https://modangirl.notion.site/bf73f15af0214f2e81dd9e460282e642"  title="페이지 바로가기 새창열림" target="_blank" rel="noreferrer noopener">피들러 오류</a></li>
+					<li><a href="https://modangirl.notion.site/Aria-9dc8b9465a224f09bb8a1688c67c75c3"  title="페이지 바로가기 새창열림" target="_blank" rel="noreferrer noopener">ARIA 정리</a></li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<div class="footer">
+		<address>@LEE HYE BIN</address>
+	</div>
+</div>
+</body>
+<script src="js/text.js"></script> 
+<script src="js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</html>

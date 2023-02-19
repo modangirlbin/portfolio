@@ -1,0 +1,11 @@
+Model Information:
+* title:	Geometry
+* source:	https://sketchfab.com/3d-models/geometry-9af41d42709a4063bd5b6101ab9a2e00
+* author:	khj107 (https://sketchfab.com/khj107)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Geometry" (https://sketchfab.com/3d-models/geometry-9af41d42709a4063bd5b6101ab9a2e00) by khj107 (https://sketchfab.com/khj107) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
