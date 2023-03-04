@@ -11,7 +11,7 @@ gulp.task('fileinclude', function() {
         prefix: '@@',
         basepath: '@file'
         }))
-    .pipe(gulp.dest('./dist/sub')); // ★★★★ 변환한 파일의 저장 위치 지정
+    .pipe(gulp.dest('./docs/sub')); //변환한 파일의 저장 위치 지정
 });
 gulp.task( "default", 
     gulp.parallel("fileinclude")
