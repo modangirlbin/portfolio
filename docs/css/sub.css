@@ -43,7 +43,7 @@
 }
 .nav_others{
   text-align: right;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 40px;
 }
 .nav_others a{
@@ -154,11 +154,11 @@
 }
 .tit_sub{
   color: #000;
-  font-size: 19px;
+  font-size: 17px;
 }
 .list_desc{
   margin-top: 60px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: lighter;
   color: #000;
 }
