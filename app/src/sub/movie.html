@@ -1,0 +1,27 @@
+
+@@include('../../include/header.html',{
+  page_index1: " ",
+  page_index2: "class='on'",
+  page_index3: " ",
+})
+  <article data-aos="fade-right">
+    <h2 class="tit_sub">The Movie DB에서 제공되는 영화정보 API 사용하여 영화 목록을 표시하는 React 모바일 웹페이지 입니다.</h2>
+    <div class="area_cont">
+      <ul class="list_desc">
+        <li>최초 랜더링시 20개의 영화정보가 표시되며, 하단 '더보기' 버튼 클릭시 20개의 영화정보가 추가로 표시됩니다.</li>
+        <li>메인이미지에는 영화 제목 및 개요 정보를, 영화 목록에는 해당 영화의 별점 정보를 나타내도록 하였습니다.</li>
+        <li>상단 메뉴버튼 클릭시 메뉴 토글되며, 해당 요소 접근성 속성 함께 맞추어 변경됩니다.</li>
+        <li>seo 고려하여 meta요소 작성하였습니다.</li>
+      </ul>
+      <div class="box_btn">
+        <a href="https://modangirlbin.github.io/movie-app" class="btn btn_go" title="페이지 바로가기 새창열림" target="_blank" rel="noreferrer noopener">웹페이지 바로가기</a>
+        <a href="https://github.com/modangirlbin/movie-app" class="btn btn_github" title="github 바로가기 새창열림" target="_blank" rel="noreferrer noopener">github 바로가기</a>
+      </div>
+      <div class="area_figure">
+        <figure>
+          <img clas="img" src="https://raw.githubusercontent.com/modangirlbin/movie-app/master/src/img/overview.png" alt="메가박스">
+        </figure>
+      </div>
+    </div>
+  </article>
+@@include('../../include/footer.html')

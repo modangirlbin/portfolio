@@ -52,8 +52,7 @@
   font-family: 'Chivo Mono', monospace;
   letter-spacing: -.5px;
 }
-
-.blink{
+.nav_others a::after{
   display: inline-block;
   position: relative;
   width: 5px;
@@ -62,62 +61,38 @@
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 
-    0 0 7px white,
-    3px 3px 30px 3px rgb(44, 93, 253), 
-    -3px -3px 7px 0 cyan;
-  animation: blink 1s linear infinite alternate;
-}
-.blink::before{
-  display: block;
-  position: absolute;
-  left: 2px;
-  width: 1px;
-  height: 20px;
-  background: white;
-  transform: translateY(-50%);
-  animation: vertical 1s easeOutQuart infinite alternate;
+  2px 2px 4px 2px rgb(174, 152, 250), 
+  -2px -2px 3px 0 rgb(146, 255, 255);
+  /* animation: blink 1s linear infinite alternate; */
   content: '';
 }
-.blink::after{
-  display: block;
-  position: absolute;
-  top: 2px;
-  width: 20px;
-  height: 1px;
-  background: white;
-  transform: translateX(-50%);
-  animation: horizontal 1s linear infinite alternate;
-  content: '';
-}
-@keyframes vertical{
-  from{
-    height: 20px;
-  }
-  to{
-    height: 0px;
-  }
-}
-@keyframes horizontal{
-  from{
-    width: 20px;
-  }
-  to{
-    width: 0px;
-  }
+.nav_others a.on::after{
+  animation: blinkOn .6s linear infinite alternate;
 }
 @keyframes blink{
   from{
     box-shadow: 
-    3px 3px 30px 3px rgb(116, 87, 223), 
-    -3px -3px 7px 0 cyan;
+    4px 4px 6px 4px rgb(174, 152, 250), 
+    -4px -4px 6px 0 rgb(146, 255, 255);
   }
   to{
     box-shadow: 
-    1px 1px 3px 1px rgb(116, 87, 223), 
-    -2px -2px 3px 0 cyan;
+    1px 1px 3px 1px rgb(174, 152, 250), 
+    -2px -2px 2px 0 rgb(146, 255, 255);
   }
 }
-
+@keyframes blinkOn{
+  from{
+    box-shadow: 
+    3px 3px 5px 3px rgb(255, 255, 255), 
+    -3px -3px 4px 0 rgb(255, 255, 255);
+  }
+  to{
+    box-shadow: 
+    3px 3px 5px 3pxx rgb(174, 152, 250), 
+    -3px -3px 4px 0 rgb(146, 255, 255);
+  }
+}
 /* content */
 .content{
   position: relative;

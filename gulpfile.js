@@ -4,8 +4,7 @@ const fileinclude = require('gulp-file-include');
 
 gulp.task('fileinclude', function() {
     return gulp.src([
-        "./app/src/sub/timex.html",
-        "./app/src/sub/bangbang.html"
+        "./app/src/sub/*.html"
     ])
     .pipe(fileinclude({
         prefix: '@@',
