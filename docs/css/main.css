@@ -76,6 +76,10 @@
 .sec_portpolio{
   overflow: hidden;
 }
+.sec_portpolio .txt_small{
+  font-size: 13px;
+  color: #777;
+}
 /* list */
 .list_item{
   margin-top:30px;

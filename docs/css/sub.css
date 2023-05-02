@@ -122,10 +122,14 @@
 .area_figure{
   margin-top: 80px;
 }
-.area_figure figure img{
+.area_figure .img{
+  display: block;
   width: 80%;
   border: 1px solid #ddd;
   opacity: .8;
+}
+.area_figure .img.img_vertical{
+  width: 45%;
 }
 .tit_sub{
   color: #000;
