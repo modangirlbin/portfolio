@@ -8,7 +8,7 @@ const phrases = [
   "Hello,",
   "It's my honor to meet you", 
   "portpolio",
-  "Hye Bin", 
+  "Lee Hye Bin", 
   "Let's go!"
 ];
 const el = document.querySelector(".text");

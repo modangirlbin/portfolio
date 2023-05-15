@@ -39,7 +39,7 @@
   position: fixed;
   top: 50%;
   transform: translateY(-50%);
-  right: 20px;
+  right: 30px;
 }
 .nav_others{
   text-align: right;
@@ -47,17 +47,21 @@
   line-height: 40px;
 }
 .nav_others a{
+  position: relative;
   display: block;
   margin-top: 10px;
+  padding-right: 20px;
   font-family: 'Chivo Mono', monospace;
   letter-spacing: -.5px;
 }
 .nav_others a::after{
-  display: inline-block;
-  position: relative;
+  display: block;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: 5px;
   height: 5px;
-  margin: 0 10px 0 15px;
   border-radius: 50%;
   background-color: #fff;
   box-shadow: 
