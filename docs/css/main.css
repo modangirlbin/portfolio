@@ -24,7 +24,6 @@
 /*************************************************** 
   CONTENTS
 ***************************************************/
-.contents{width:1160px; margin:0 auto}
 .tit_sec{
   padding: 10px 0;
   font-size: 30px;
@@ -34,7 +33,6 @@
   width: 1160px;
   margin: 0 auto;
   padding: 50px 30px;
-  border-radius: 20px;
   box-sizing: border-box;
 }
 .box_inner p{
