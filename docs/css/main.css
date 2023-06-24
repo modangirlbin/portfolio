@@ -148,10 +148,13 @@
   margin-right: 20px;
   border-radius: 10px;
   text-align: center;
-  background: url(//upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Notion-logo.svg/100px-Notion-logo.svg.png) no-repeat;
+  background: url(../img/bg_notion.png) no-repeat;
   background-size: contain;
   background-color: rgba(0,0,0,.5);
 
+}
+.list_essay li.tistory{
+  background-image: url(../img/bg_tistory.png);
 }
 .list_essay li::before{
   display: block;
