@@ -124,7 +124,10 @@
   z-index: 1;
 }
 /* thum */
-.thum_timex a{background-image:url(https://raw.githubusercontent.com/modangirlbin/timex/master/images/overview.png)}
+.thum_timex a{
+  width: 130px;
+  background-image:url(https://raw.githubusercontent.com/modangirlbin/timex/master/images/overview.png)
+}
 .thum_movie a{background-image:url(https://raw.githubusercontent.com/modangirlbin/movie-app/master/src/img/overview.png)}
 .thum_intergis a{background-image:url(https://raw.githubusercontent.com/modangirlbin/intergis/master/resource/images/overview.png)}
 .thum_bangbang a{background-image:url(https://raw.githubusercontent.com/modangirlbin/find-house/master/src/assets/img/overview.png)}
