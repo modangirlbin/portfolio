@@ -35,9 +35,28 @@ $(window).scroll(function(){
     
     //section bottom위치: section top + outerHeight
     let sectionBottom = sectionTop + $sec.eq(1).outerHeight();
-    console.log(sectionBottom)
+    // console.log(sectionBottom)
     //스크롤이 sectionTop보다 크거나 작고 
 
   }
 
 });
+
+//github 버튼
+
+const $list_item = document.getElementById('list_item');
+const $btn_popol = document.getElementById('btn_popol');
+
+$list_item.onclick = function(){
+  
+  const targetTop = $list_item.getBoundingClientRect().left;
+  console.log(targetTop);
+  $btn_popol.classList.remove('aos-animate');
+  
+  // if(targetTop<200){
+  //   console.log('hi');
+  //   $btn_popol.classList.remove('aos-animate');
+  // }else{
+  //   $btn_popol.classList.add('aos-animate');
+  // }
+};
