@@ -206,20 +206,25 @@
   position: relative;
   text-align: center;
 }
-.wrap_text {
+.header .text_main {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 30px);
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 1;
-}
-.text {
   font-family: 'Chivo Mono', monospace;
   font-weight: 100;
   font-size: 40px;
   color: #444;
+}
+.header .text_desc {
+  padding: 0 15px 15px 0;
+  font-size: 8px;
+  line-height: 15px;
+  text-align: right;
+  color: #777;
 }
 .dud {
   color: #aaa;

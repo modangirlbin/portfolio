@@ -11,7 +11,7 @@ const phrases = [
   "Lee Hye Bin", 
   "Let's go!"
 ];
-const el = document.querySelector(".text");
+const el = document.querySelector(".text_main");
 //
 class TextScramble {
   constructor(el) {
