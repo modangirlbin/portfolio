@@ -19,6 +19,8 @@ a:hover{color:#000}
   position: relative;
   min-width: 1160px;
 }
+.go_contents{position:fixed; top:-9999px; left:0; width:100%; padding:10px; font-weight:bold; text-align:center; color:#fff; background:#2b4da7; z-index:9999}
+.go_contents:focus{top:0px}
 
 /* HEADER */
 .header{

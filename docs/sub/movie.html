@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge" />	
 <meta name="description" content="직방" />
 <meta name="keyword" content="publisher, ui-developer, 마크업, UI개발" />
-<title>portpoilio, LEE HYE BIN</title>
+<title>프로젝트 상세페이지 - portpoilio, LEE HYE BIN</title>
 <link rel="shortcut icon" href="../img/title_icon.ico" type="image/x-icon" /> 
 <link rel="stylesheet" href="../css/sub.css" />
 <script
@@ -22,17 +22,19 @@
 <link href="https://fonts.googleapis.com/css2?family=Chivo+Mono:ital,wght@1,100&display=swap" rel="stylesheet">
 </head>
 <body>
+  <a href="#content" class="go_contents">본문내용 바로가기</a>
   <div class="wrap sub">
   <div class="header">
+    <h1 class="offscreen">@@page_title</h1>
     <aside class="aside_others">
       <nav class="nav_others">
         <h2 class="offscreen">others</h2>
         <ul>
-          <li><a href="https://modangirlbin.github.io/portfolio/sub/movie.html" class='on'>project1</span></a></li>
-          <li><a href="https://modangirlbin.github.io/portfolio/sub/bangbang.html"  >project2</span></a></li>
-          <li><a href="https://modangirlbin.github.io/portfolio/sub/timex.html"  >project3</span></a></li>
-          <li><a href="https://modangirlbin.github.io/portfolio/sub/intergis.html"  >project4</span></a></li>
-          <li><a href="https://modangirlbin.github.io/portfolio/sub/item_list.html"  >project5</span></a></li>
+          <li><a class="link_others on" href="https://modangirlbin.github.io/portfolio/sub/movie.html">project1</span></a></li>
+          <li><a class="link_others  " href="https://modangirlbin.github.io/portfolio/sub/bangbang.html">project2</span></a></li>
+          <li><a class="link_others  " href="https://modangirlbin.github.io/portfolio/sub/timex.html">project3</span></a></li>
+          <li><a class="link_others  " href="https://modangirlbin.github.io/portfolio/sub/intergis.html">project4</span></a></li>
+          <li><a class="link_others  " href="https://modangirlbin.github.io/portfolio/sub/item_list.html">project5</span></a></li>
       </ul>
       </nav>
     </aside>
@@ -89,13 +91,13 @@
   <div class="content">
   <article data-aos="fade-right">
     <h2 class="tit_sub">The Movie DB에서 제공되는 영화정보 API 사용하여 영화 목록을 표시하는 React 모바일 웹페이지 입니다.</h2>
-    <div class="area_cont">
+    <div class="wrap_cont">
       <ul class="list_desc">
-        <li>영화목록 클릭시 각 영화의 상세페이지로 연결되며, react router 사용하였습니다.</li>
-        <li>최초 랜더링시 20개의 영화정보가 표시되며, 하단 '더보기' 버튼 클릭시 20개의 영화정보가 추가로 표시됩니다.</li>
-        <li>메인이미지에는 영화 제목 및 개요 정보를, 영화 목록에는 해당 영화의 별점 정보를 나타내도록 하였습니다.</li>
-        <li>상단 메뉴버튼 클릭시 메뉴 토글되며, 해당 요소 접근성 속성 함께 맞추어 변경됩니다.</li>
-        <li>seo 고려하여 meta요소 작성하였습니다.</li>
+        <li class="item_desc">영화목록 클릭시 각 영화의 상세페이지로 연결되며, react router 사용하였습니다.</li>
+        <li class="item_desc">최초 랜더링시 20개의 영화정보가 표시되며, 하단 '더보기' 버튼 클릭시 20개의 영화정보가 추가로 표시됩니다.</li>
+        <li class="item_desc">메인이미지에는 영화 제목 및 개요 정보를, 영화 목록에는 해당 영화의 별점 정보를 나타내도록 하였습니다.</li>
+        <li class="item_desc">상단 메뉴버튼 클릭시 메뉴 토글되며, 해당 요소 접근성 속성 함께 맞추어 변경됩니다.</li>
+        <li class="item_desc">seo 고려하여 meta요소 작성하였습니다.</li>
       </ul>
       <div class="box_btn">
         <a href="https://modangirlbin.github.io/movie-app" class="btn btn_go" title="페이지 바로가기 새창열림" target="_blank" rel="noreferrer noopener">웹페이지 바로가기</a>
